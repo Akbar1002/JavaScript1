@@ -10,3 +10,6 @@ if (a > z) {
 else {
     console.log(z)
     }
+
+
+    console.log(Math.round(32.65));
