@@ -7,16 +7,19 @@ const cartForParty = {
   redbull: 2,
   beer: 1.2,
 };
-// what is the better solution for this ?//
 
-function calculateTotalPrice(num) {
-  const total =
-    cartForParty["cola"] +
-    cartForParty["chips"] +
-    cartForParty["popcorn"] +
-    cartForParty["redbull"] +
-    cartForParty["beer"];
-  console.log(`Total: Euro ${total}`);
+function calculateTotalPrice(items) {
+  // exception check
+  let price = 0;
+  if (cartForParty.length === 0) {
+    console.log(price);
+    return;
+  }
+  // regular
+  for (let item in items) {
+    price += items[item];
+  }
+  console.log(`TOtal: ${price}`);
 }
 
 calculateTotalPrice(cartForParty);
